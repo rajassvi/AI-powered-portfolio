@@ -1,0 +1,873 @@
+/* ============================================
+   ENHANCED UX PORTFOLIO - COOKS ON CALL
+   Advanced Interactions & Animations
+   ============================================ */
+
+/* Scroll-triggered fade-in animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Apply staggered animations to sections */
+.case-study-hero {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.project-overview {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+    opacity: 0;
+}
+
+.content-section {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+}
+
+.content-section:nth-child(even) {
+    animation-delay: 0.1s;
+}
+
+.content-section:nth-child(odd) {
+    animation-delay: 0.15s;
+}
+
+/* Stagger overview cards */
+.overview-card {
+    animation: scaleIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+}
+
+.overview-card:nth-child(1) { animation-delay: 0.1s; }
+.overview-card:nth-child(2) { animation-delay: 0.2s; }
+.overview-card:nth-child(3) { animation-delay: 0.3s; }
+.overview-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Enhanced hover effects for overview cards */
+.overview-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overview-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overview-card:hover::before {
+    left: 100%;
+}
+
+.overview-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(99, 102, 241, 0.25);
+}
+
+.overview-card:hover .overview-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.overview-icon {
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Problem-Solution grid enhancements */
+.problem-solution-grid {
+    gap: 3rem;
+}
+
+.problem-block,
+.solution-block {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.problem-block {
+    animation: fadeInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+    opacity: 0;
+}
+
+.solution-block {
+    animation: fadeInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
+    opacity: 0;
+}
+
+.problem-block:hover,
+.solution-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Design process flow - sequential reveal */
+.process-step {
+    animation: scaleIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process-step:nth-child(1) { animation-delay: 0.1s; }
+.process-step:nth-child(3) { animation-delay: 0.2s; }
+.process-step:nth-child(5) { animation-delay: 0.3s; }
+.process-step:nth-child(7) { animation-delay: 0.4s; }
+.process-step:nth-child(9) { animation-delay: 0.5s; }
+
+.process-step:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 32px rgba(99, 102, 241, 0.3);
+}
+
+.step-number {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process-step:hover .step-number {
+    transform: scale(1.2);
+    text-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
+}
+
+/* Research methods cards - stagger effect */
+.method-card {
+    animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.method-card:nth-child(1) { animation-delay: 0.1s; }
+.method-card:nth-child(2) { animation-delay: 0.2s; }
+.method-card:nth-child(3) { animation-delay: 0.3s; }
+
+.method-card:hover {
+    transform: translateY(-10px) rotate(-2deg);
+    box-shadow: 0 16px 48px rgba(99, 102, 241, 0.25);
+}
+
+.method-icon {
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.method-card:hover .method-icon {
+    transform: scale(1.3) rotate(10deg);
+}
+
+/* Image containers with reveal effect */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), transparent);
+    z-index: 1;
+    transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-container:hover::before {
+    left: 100%;
+}
+
+.image-container:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 24px 60px rgba(99, 102, 241, 0.3);
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Research images animation */
+.research-images .image-container {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+}
+
+.research-images .image-container:nth-child(1) { animation-delay: 0.2s; }
+.research-images .image-container:nth-child(2) { animation-delay: 0.4s; }
+
+/* Persona images with grid reveal */
+.persona-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    animation: scaleIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.persona-image-container:nth-child(1) { animation-delay: 0.1s; }
+.persona-image-container:nth-child(2) { animation-delay: 0.2s; }
+.persona-image-container:nth-child(3) { animation-delay: 0.3s; }
+
+.persona-image-container:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.35);
+}
+
+.persona-image-container img {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.persona-image-container:hover img {
+    transform: scale(1.08);
+}
+
+/* Key insights cards - dramatic entrance */
+.insight-card-large {
+    animation: scaleIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.insight-card-large:nth-child(1) { animation-delay: 0.2s; }
+.insight-card-large:nth-child(2) { animation-delay: 0.3s; }
+.insight-card-large:nth-child(3) { animation-delay: 0.4s; }
+
+.insight-card-large:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+}
+
+.insight-stat {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.insight-card-large:hover .insight-stat {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.6));
+}
+
+/* Feature cards enhanced grid */
+.feature-card-enhanced {
+    animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card-enhanced:nth-child(1) { animation-delay: 0.1s; }
+.feature-card-enhanced:nth-child(2) { animation-delay: 0.15s; }
+.feature-card-enhanced:nth-child(3) { animation-delay: 0.2s; }
+.feature-card-enhanced:nth-child(4) { animation-delay: 0.25s; }
+.feature-card-enhanced:nth-child(5) { animation-delay: 0.3s; }
+.feature-card-enhanced:nth-child(6) { animation-delay: 0.35s; }
+
+.feature-card-enhanced::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card-enhanced:hover::after {
+    opacity: 1;
+}
+
+.feature-card-enhanced:hover {
+    transform: translateY(-10px) rotate(-1deg);
+    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.3);
+}
+
+.feature-icon-large {
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.feature-card-enhanced:hover .feature-icon-large {
+    transform: scale(1.4) rotate(10deg);
+}
+
+/* Feature prioritization image */
+.feature-prioritization {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+    opacity: 0;
+}
+
+.feature-prioritization img {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-prioritization:hover img {
+    transform: scale(1.02) translateY(-4px);
+    box-shadow: 0 24px 64px rgba(99, 102, 241, 0.35);
+}
+
+/* Design progression images */
+.design-progression-images .image-container {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+}
+
+.design-progression-images .image-container:nth-child(1) { animation-delay: 0.2s; }
+.design-progression-images .image-container:nth-child(2) { animation-delay: 0.4s; }
+
+/* Evolution steps with connection line */
+.design-evolution {
+    position: relative;
+}
+
+.evolution-step {
+    animation: scaleIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.evolution-step:nth-child(1) { animation-delay: 0.1s; }
+.evolution-step:nth-child(3) { animation-delay: 0.2s; }
+.evolution-step:nth-child(5) { animation-delay: 0.3s; }
+
+.evolution-step:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+.evolution-badge {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.evolution-step:hover .evolution-badge {
+    transform: scale(1.15);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+}
+
+/* Testing grid columns */
+.testing-column {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testing-column.success { animation-delay: 0.2s; }
+.testing-column.iteration { animation-delay: 0.3s; }
+
+.testing-column:hover {
+    transform: translateY(-8px);
+}
+
+.testing-list li {
+    animation: fadeInLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testing-column.success .testing-list li:nth-child(1) { animation-delay: 0.4s; }
+.testing-column.success .testing-list li:nth-child(2) { animation-delay: 0.5s; }
+.testing-column.success .testing-list li:nth-child(3) { animation-delay: 0.6s; }
+
+.testing-column.iteration .testing-list li:nth-child(1) { animation-delay: 0.5s; }
+.testing-column.iteration .testing-list li:nth-child(2) { animation-delay: 0.6s; }
+.testing-column.iteration .testing-list li:nth-child(3) { animation-delay: 0.7s; }
+
+.testing-list li:hover {
+    transform: translateX(8px);
+    background: rgba(99, 102, 241, 0.05);
+    padding-left: 1rem;
+    border-radius: 12px;
+}
+
+/* Outcome section - grand reveal */
+.outcome-highlight {
+    animation: scaleIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s forwards;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.outcome-highlight:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 48px rgba(99, 102, 241, 0.3);
+}
+
+.metric-item {
+    animation: fadeInUp 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.metric-item:nth-child(1) { animation-delay: 0.5s; }
+.metric-item:nth-child(2) { animation-delay: 0.6s; }
+.metric-item:nth-child(3) { animation-delay: 0.7s; }
+
+.metric-item:hover {
+    transform: translateY(-12px) scale(1.1);
+}
+
+.metric-value {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.metric-item:hover .metric-value {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 30px rgba(99, 102, 241, 0.8));
+}
+
+/* Learning cards - final flourish */
+.learning-card-enhanced {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.learning-card-enhanced:nth-child(1) { animation-delay: 0.2s; }
+.learning-card-enhanced:nth-child(2) { animation-delay: 0.3s; }
+.learning-card-enhanced:nth-child(3) { animation-delay: 0.4s; }
+
+.learning-card-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--gradient-primary);
+    transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.learning-card-enhanced:hover::before {
+    height: 100%;
+}
+
+.learning-card-enhanced:hover {
+    transform: translateX(8px);
+    padding-left: 2.75rem;
+}
+
+.learning-number {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.learning-card-enhanced:hover .learning-number {
+    transform: scale(1.3);
+    opacity: 0.5;
+}
+
+/* Button enhancements */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 16px 40px rgba(99, 102, 241, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* Project navigation */
+.project-navigation {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+}
+
+.nav-btn {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-btn:hover::after {
+    width: 100%;
+}
+
+.nav-btn:hover {
+    transform: translateX(8px);
+    color: var(--primary-light);
+}
+
+/* Parallax scroll effect for section backgrounds */
+.bg-dark {
+    position: relative;
+}
+
+.bg-dark::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Light mode adjustments */
+[data-theme="light"] .image-container:hover {
+    box-shadow: 0 24px 60px rgba(234, 88, 12, 0.25);
+}
+
+[data-theme="light"] .overview-card:hover {
+    box-shadow: 0 16px 48px rgba(234, 88, 12, 0.2);
+}
+
+[data-theme="light"] .feature-card-enhanced:hover {
+    box-shadow: 0 20px 50px rgba(234, 88, 12, 0.25);
+}
+
+[data-theme="light"] .btn-primary:hover {
+    box-shadow: 0 16px 40px rgba(234, 88, 12, 0.35);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .image-container:hover img,
+    .persona-image-container:hover img {
+        transform: scale(1.02);
+    }
+    
+    .overview-card:hover,
+    .feature-card-enhanced:hover,
+    .learning-card-enhanced:hover {
+        transform: translateY(-4px);
+    }
+    
+    .metric-item:hover {
+        transform: translateY(-6px) scale(1.05);
+    }
+}
+/* ============================================
+   IMAGE SIZING FIXES - COOKS ON CALL
+   Add this to your enhanced-animations.css file
+   ============================================ */
+
+/* Reset and base image styling */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    object-fit: contain; /* Prevents distortion */
+}
+
+/* Research images - Full width, natural height */
+.research-images {
+    margin-top: 3rem;
+}
+
+.research-images .image-container {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.research-images .image-container img {
+    max-height: 800px; /* Prevents images from being too tall */
+    object-fit: contain;
+}
+
+/* Persona images - Grid layout with consistent sizing */
+.persona-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.persona-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--card-bg);
+}
+
+.persona-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    object-fit: cover; /* Ensures consistent height */
+    aspect-ratio: 3/4; /* Portrait orientation for personas */
+}
+
+/* Feature prioritization image */
+.feature-prioritization {
+    margin-top: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-prioritization img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    display: block;
+    max-height: 800px;
+    object-fit: contain;
+}
+
+/* Design progression images */
+.design-progression-images {
+    margin-top: 4rem;
+}
+
+.design-progression-images .image-container {
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.design-progression-images .image-container img {
+    width: 100%;
+    height: auto;
+    max-height: 900px;
+    object-fit: contain;
+}
+
+/* Specific sizing for different image types */
+
+/* Affinity diagrams - usually wide */
+.research-images .image-container:has(img[alt*="Affinity"]) img {
+    max-height: 700px;
+}
+
+/* Competitive analysis - usually wide */
+.research-images .image-container:has(img[alt*="Competitive"]) img {
+    max-height: 700px;
+}
+
+/* Style guide - usually tall */
+.design-progression-images .image-container:has(img[alt*="Style Guide"]) img {
+    max-height: 1000px;
+}
+
+/* Participatory design - photo, natural sizing */
+.design-progression-images .image-container:has(img[alt*="Participatory"]) img {
+    max-height: 600px;
+}
+
+/* NUF test matrix - square-ish */
+.feature-prioritization img[alt*="NUF"] {
+    max-height: 700px;
+}
+
+/* Mobile responsive sizing */
+@media (max-width: 968px) {
+    .persona-images {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .persona-image-container img {
+        aspect-ratio: auto; /* Let images be their natural size on mobile */
+        max-height: 600px;
+    }
+    
+    .research-images .image-container img,
+    .design-progression-images .image-container img,
+    .feature-prioritization img {
+        max-height: 500px; /* Smaller on mobile screens */
+    }
+}
+
+@media (max-width: 640px) {
+    .research-images .image-container img,
+    .design-progression-images .image-container img,
+    .feature-prioritization img {
+        max-height: 400px;
+    }
+}
+
+/* Ensure images don't break layout */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix for very tall images */
+.image-container {
+    max-height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+}
+
+/* Image loading state */
+.image-container img {
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-container img:not([src]) {
+    opacity: 0;
+}
+
+/* Light mode adjustments */
+[data-theme="light"] .image-container,
+[data-theme="light"] .persona-image-container {
+    background: #ffffff;
+    border: 1px solid var(--card-border);
+    /* IMAGE SIZING FIXES */
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 800px;
+}
+
+.research-images .image-container img {
+    max-height: 700px;
+}
+
+.persona-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+}
+
+.design-progression-images .image-container img {
+    max-height: 900px;
+    object-fit: contain;
+}
+
+.feature-prioritization img {
+    max-height: 700px;
+    object-fit: contain;
+}
+
+@media (max-width: 968px) {
+    .persona-image-container img {
+        aspect-ratio: auto;
+        max-height: 600px;
+    }
+    
+    .image-container img {
+        max-height: 500px;
+    }
+}
+}

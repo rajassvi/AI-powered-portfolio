@@ -1,0 +1,346 @@
+{% extends "base.html" %}
+
+{% block title %}Projects | Rajassvi - UI/UX Engineer{% endblock %}
+
+{% block content %}
+<section class="projects-hero">
+    <div class="section-header">
+        <span class="section-label">Portfolio</span>
+        <h1 class="page-title">Featured Projects</h1>
+        <p class="page-subtitle">A collection of design and development work that I'm proud of</p>
+    </div>
+</section>
+
+<section class="projects-section">
+    <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="development">Development</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+    </div>
+    
+    <div class="projects-grid">
+    <!-- Cooks on Call - Featured First -->
+    <article class="project-card featured" data-category="design">
+        <div class="project-image">
+            <img src="{{ url_for('static', filename='images/coc-thumbnail.png') }}" alt="Cooks on Call UK" class="project-thumbnail">
+            <div class="project-overlay">
+                <a href="/projects/cooks-on-call" class="btn-view">View Case Study</a>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-meta">
+                <span class="project-tag">Featured</span>
+                <span class="project-year">2023</span>
+            </div>
+            <h3 class="project-title">Cooks on Call UK</h3>
+            <p class="project-description">
+                Complete UX research and design for a homemade meal delivery app connecting international 
+                students with local home cooks. Led user research, created personas, and designed mobile experience.
+            </p>
+            <div class="project-stack">
+                <span>Figma</span>
+                <span>User Research</span>
+                <span>Prototyping</span>
+                <span>Usability Testing</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- BlockVote -->
+    <article class="project-card" data-category="design">
+        <div class="project-image">
+            <img src="{{ url_for('static', filename='images/blockvote-thumbnail.png') }}" alt="BlockVote" class="project-thumbnail">
+            <div class="project-overlay">
+                <a href="/projects/blockvote" class="btn-view">View Case Study</a>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-meta">
+                <span class="project-tag">UX Design</span>
+                <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-title">🗳️ BlockVote</h3>
+            <p class="project-description">
+                Secure blockchain-based digital voting platform designed to increase trust, transparency, and 
+                accessibility in democratic elections.
+            </p>
+            <div class="project-stack">
+                <span>UX Research</span>
+                <span>Interaction Design</span>
+                <span>Figma</span>
+                <span>Usability Testing</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- GraphRAG Platform -->
+    <article class="project-card" data-category="fullstack">
+        <div class="project-image">
+            <div class="project-placeholder project-gradient-1">
+                <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+            </div>
+            <div class="project-overlay">
+                <button class="btn-view">Coming Soon</button>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-meta">
+                <span class="project-year">2026</span>
+            </div>
+            <h3 class="project-title">GraphRAG Platform</h3>
+            <p class="project-description">
+                Enterprise-grade knowledge graph-powered RAG system with advanced querying capabilities. 
+                Built with Flask, Neo4j, and cutting-edge LLM integration for intelligent document analysis.
+            </p>
+            <div class="project-stack">
+                <span>Flask</span>
+                <span>Neo4j</span>
+                <span>Python</span>
+                <span>LLMs</span>
+                <span>RAG</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Data Visualization Dashboard -->
+    <article class="project-card" data-category="fullstack">
+        <div class="project-image">
+            <div class="project-placeholder project-gradient-2">
+                <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <path d="M3 9h18M9 21V9"/>
+                </svg>
+            </div>
+            <div class="project-overlay">
+                <button class="btn-view">Coming Soon</button>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-meta">
+                <span class="project-year">2025</span>
+            </div>
+            <h3 class="project-title">Data Visualization Dashboard</h3>
+            <p class="project-description">
+                Interactive analytics dashboard with real-time data processing and beautiful visualizations. 
+                Built with React, Node.js, and D3.js for enterprise clients.
+            </p>
+            <div class="project-stack">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>PostgreSQL</span>
+                <span>Tableau</span>
+                <span>D3.js</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- E-Commerce Redesign -->
+    <article class="project-card" data-category="design">
+        <div class="project-image">
+            <div class="project-placeholder project-gradient-3">
+                <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            <div class="project-overlay">
+                <button class="btn-view">Coming Soon</button>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-meta">
+                <span class="project-year">2025</span>
+            </div>
+            <h3 class="project-title">E-Commerce Redesign</h3>
+            <p class="project-description">
+                Complete UX overhaul for an e-commerce platform. Increased conversion rates by 45% 
+                through improved user flows and modern design system.
+            </p>
+            <div class="project-stack">
+                <span>Figma</span>
+                <span>UX Research</span>
+                <span>Design System</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Component Library -->
+    <article class="project-card" data-category="development">
+        <div class="project-image">
+            <div class="project-placeholder project-gradient-4">
+                <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+            </div>
+            <div class="project-overlay">
+                <button class="btn-view">Coming Soon</button>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-meta">
+                <span class="project-year">2025</span>
+            </div>
+            <h3 class="project-title">Component Library</h3>
+            <p class="project-description">
+                Production-ready React component library with TypeScript support and comprehensive documentation. 
+                Used by 5+ development teams across the organization.
+            </p>
+            <div class="project-stack">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Storybook</span>
+                <span>Jest</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- API Integration Platform -->
+    <article class="project-card" data-category="development">
+        <div class="project-image">
+            <div class="project-placeholder project-gradient-5">
+                <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                </svg>
+            </div>
+            <div class="project-overlay">
+                <button class="btn-view">Coming Soon</button>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-meta">
+                <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-title">API Integration Platform</h3>
+            <p class="project-description">
+                Microservices architecture for seamless third-party API integrations. Handles 1M+ 
+                requests daily with 99.9% uptime.
+            </p>
+            <div class="project-stack">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>Redis</span>
+                <span>Docker</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Mobile Banking App -->
+    <article class="project-card" data-category="fullstack">
+        <div class="project-image">
+            <div class="project-placeholder project-gradient-6">
+                <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                    <line x1="12" y1="18" x2="12.01" y2="18"/>
+                </svg>
+            </div>
+            <div class="project-overlay">
+                <button class="btn-view">Coming Soon</button>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-meta">
+                <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-title">Mobile Banking App</h3>
+            <p class="project-description">
+                Full-stack mobile banking solution with biometric authentication and real-time transactions. 
+                Serving 50k+ active users.
+            </p>
+            <div class="project-stack">
+                <span>React Native</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>AWS</span>
+            </div>
+        </div>
+    </article>
+    </div>
+</section>
+
+<style>
+/* Project Thumbnail Styling */
+.project-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .project-thumbnail {
+    transform: scale(1.05);
+}
+
+/* Ensure images load properly */
+.project-image {
+    overflow: hidden;
+    border-radius: 0;
+    background: var(--bg-secondary);
+    aspect-ratio: 16 / 9;
+}
+
+/* Smooth corners only on the entire card */
+.project-card {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* Fallback for missing images */
+.project-image img {
+    display: block;
+}
+
+/* Enhanced project card styling for case studies */
+.project-card[data-category="design"] .project-content {
+    border-left: 3px solid var(--primary);
+}
+
+.project-card.featured {
+    position: relative;
+}
+
+.project-card.featured::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: var(--gradient-primary);
+    border-radius: 20px;
+    z-index: -1;
+    opacity: 0.3;
+}
+</style>
+
+<script>
+// Filter functionality
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // Filter projects
+        projectCards.forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+                card.style.display = 'block';
+                setTimeout(() => card.style.opacity = '1', 10);
+            } else {
+                card.style.opacity = '0';
+                setTimeout(() => card.style.display = 'none', 300);
+            }
+        });
+    });
+});
+</script>
+
+{% endblock %}

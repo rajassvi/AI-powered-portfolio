@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Rajassvi - UI/UX Engineer{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Available for Projects</span>
+        </div>
+        
+        <h1 class="hero-title">
+            <span class="title-line">Crafting Digital</span>
+            <span class="title-line gradient-text">Experiences</span>
+            <span class="title-line">That Matter</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+            UI/UX Engineer specializing in building beautiful, functional interfaces
+            that users love. Transforming complex problems into elegant solutions.
+        </p>
+        
+        <div class="hero-cta">
+            <button class="btn btn-primary" onclick="scrollToProjects()">
+                <span>View My Work</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </button>
+            <button class="btn btn-secondary" onclick="showAlert()">
+                <span>Let's Talk</span>
+            </button>
+        </div>
+    </div>
+    
+    <div class="hero-visual">
+        <div class="floating-card card-1">
+            <div class="card-icon">🎨</div>
+            <div class="card-content">
+                <h4>Design</h4>
+                <p>Pixel Perfect</p>
+            </div>
+        </div>
+        <div class="floating-card card-2">
+            <div class="card-icon">⚡</div>
+            <div class="card-content">
+                <h4>Performance</h4>
+                <p>Lightning Fast</p>
+            </div>
+        </div>
+        <div class="floating-card card-3">
+            <div class="card-icon">💡</div>
+            <div class="card-content">
+                <h4>Innovation</h4>
+                <p>Future Ready</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+    </div>
+</section>
+
+<section class="skills-section">
+    <div class="section-header">
+        <span class="section-label">Expertise</span>
+        <h2 class="section-title">What I Do Best</h2>
+    </div>
+    
+    <div class="skills-grid">
+        <div class="skill-card" data-skill="1">
+            <div class="skill-number">01</div>
+            <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+            </div>
+            <h3>UI Design</h3>
+            <p>Creating stunning interfaces with attention to typography, color theory, and visual hierarchy</p>
+            <div class="skill-tech">
+                <span>Figma</span>
+                <span>Adobe XD</span>
+                <span>Sketch</span>
+            </div>
+        </div>
+        
+        <div class="skill-card" data-skill="2">
+            <div class="skill-number">02</div>
+            <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            <h3>UX Research</h3>
+            <p>User-centered design approach backed by research, testing, and data-driven insights</p>
+            <div class="skill-tech">
+                <span>User Testing</span>
+                <span>Analytics</span>
+                <span>A/B Testing</span>
+            </div>
+        </div>
+        
+        <div class="skill-card" data-skill="3">
+            <div class="skill-number">03</div>
+            <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                </svg>
+            </div>
+            <h3>Frontend Development</h3>
+            <p>Bringing designs to life with clean, performant code and modern frameworks</p>
+            <div class="skill-tech">
+                <span>React</span>
+                <span>Vue</span>
+                <span>CSS/SASS</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
