@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+
+{% block title %}About | Rajassvi - UI/UX Engineer{% endblock %}
+
+{% block content %}
+
+<!-- Minimal Hero Section - Photo Right, Text Left -->
+<section class="about-hero-clean">
+    <div class="about-hero-grid">
+        <div class="about-hero-text">
+            <span class="hero-label">ABOUT ME</span>
+            <h1 class="hero-title">
+                Crafting Digital Experiences 
+                <span class="hero-highlight">With Humans in Mind</span>
+            </h1>
+            <p class="hero-description">
+                I'm a UI/UX Engineer who bridges design and development to create experiences that feel effortless. I believe great design isn't just about aesthetics—it's about solving real problems for real people.
+            </p>
+        </div>
+        
+        <div class="about-hero-photo">
+            <div class="hero-photo-wrapper">
+                <img src="{{ url_for('static', filename='images/me.jpeg') }}" alt="Rajassvi" class="hero-photo">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-content">
+    <!-- Skills & Expertise -->
+    <div class="about-skills">
+        <h2 class="section-title-left">Skills & Expertise</h2>
+        
+        <div class="skills-categories">
+            <div class="skill-category">
+                <div class="category-icon">🎨</div>
+                <h3>Design</h3>
+                <ul class="skill-list">
+                    <li>UI/UX Design</li>
+                    <li>User Research</li>
+                    <li>Wireframing & Prototyping</li>
+                    <li>Design Systems</li>
+                    <li>Interaction Design</li>
+                    <li>Usability Testing</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="category-icon">💻</div>
+                <h3>Development</h3>
+                <ul class="skill-list">
+                    <li>HTML5 & CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React & Vue.js</li>
+                    <li>Responsive Design</li>
+                    <li>Git & Version Control</li>
+                    <li>Performance Optimization</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="category-icon">🛠️</div>
+                <h3>Tools</h3>
+                <ul class="skill-list">
+                    <li>Figma</li>
+                    <li>Adobe XD</li>
+                    <li>Sketch</li>
+                    <li>Miro</li>
+                    <li>Maze</li>
+                    <li>Google Analytics</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Timeline -->
+    <div class="about-experience">
+        <h2 class="section-title-left">Work Experience</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2024 - Present</span>
+                    <h3>Freelance UI/UX Engineer</h3>
+                    <p class="company">Tech Innovation companies</p>
+                    <p>Leading design initiatives for enterprise SaaS products, conducting user research, and collaborating with cross-functional teams to deliver exceptional user experiences.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2023 - 2024</span>
+                    <h3>UI/UX Designer Intern</h3>
+                    <p class="company">Wish To Wear</p>
+                    <p>Designed and implemented user interfaces for mobile and web applications, conducted usability testing, and created comprehensive design systems.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2019 - 2022</span>
+                    <h3>Junior UX Designer/SPS</h3>
+                    <p class="company">Amazon</p>
+                    <p>Assisted in user research, created wireframes and prototypes, and collaborated with developers to implement pixel-perfect designs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="about-education">
+        <h2 class="section-title-left">Education</h2>
+        
+        <div class="education-grid">
+            <div class="education-card">
+                <div class="edu-icon">🎓</div>
+                <h3>Masters in User Experience Design</h3>
+                <p class="edu-school">Kingston University</p>
+                <p class="edu-year">2022 - 2023</p>
+                <p>Advanced studies in user research, information architecture, interaction design, and human-centered systems</p>
+            </div>
+            
+            <div class="education-card">
+                <div class="edu-icon">📜</div>
+                <h3>UX Design Certification</h3>
+                <p class="edu-school">Nielsen Norman Group</p>
+                <p class="edu-year">2021</p>
+                <p>Certified in UX Design fundamentals and advanced research methodologies</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Outside Work -->
+    <div class="about-outside-work">
+        <h2 class="section-title-left">Outside of Work</h2>
+        
+        <div class="outside-work-content">
+            <p>When I'm not designing or coding, you'll probably find me:</p>
+            
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <span class="hobby-emoji">🏋️</span>
+                    <h4>Gym</h4>
+                    <p>Staying consistent and clearing my head with a good workout</p>
+                </div>
+                
+                <div class="hobby-card">
+                    <span class="hobby-emoji">✈️</span>
+                    <h4>Travel</h4>
+                    <p>Exploring new places, cultures, and visual inspiration</p>
+                </div>
+                
+                <div class="hobby-card">
+                    <span class="hobby-emoji">📺</span>
+                    <h4>Binge Watching</h4>
+                    <p>Getting way too invested in good series and storylines</p>
+                </div>
+                
+                <div class="hobby-card">
+                    <span class="hobby-emoji">🍜</span>
+                    <h4>New Cuisines</h4>
+                    <p>Trying out new food spots and discovering flavors</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Download -->
+    <div class="resume-download">
+        <div class="resume-cta">
+            <h3>Interested in working together?</h3>
+            <p>Download my resume to learn more about my experience and qualifications</p>
+            <div class="resume-buttons">
+                <a href="#" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                    </svg>
+                    <span>Download Resume</span>
+                </a>
+                <a href="/contact" class="btn btn-secondary">
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

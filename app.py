@@ -32,6 +32,10 @@ mail = Mail(app)
 def home():
     return render_template("index.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 @app.route("/projects")
 def projects():
     return render_template("projects.html")
@@ -47,6 +51,10 @@ def cooks_on_call():
 @app.route("/projects/blockvote")
 def blockvote():
     return render_template("blockvote.html")
+
+@app.route("/projects/snv-automation")
+def snv_automation():
+    return render_template("snv-automation.html")
 
 # --------------------------------------------------
 # Contact Form API (POST)
