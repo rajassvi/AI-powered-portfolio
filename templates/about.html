@@ -3,30 +3,40 @@
 {% block title %}About | Rajassvi - UI/UX Engineer{% endblock %}
 
 {% block content %}
-
-<!-- Minimal Hero Section - Photo Right, Text Left -->
-<section class="about-hero-clean">
-    <div class="about-hero-grid">
-        <div class="about-hero-text">
-            <span class="hero-label">ABOUT ME</span>
-            <h1 class="hero-title">
-                Crafting Digital Experiences 
-                <span class="hero-highlight">With Humans in Mind</span>
-            </h1>
-            <p class="hero-description">
-                I'm a UI/UX Engineer who bridges design and development to create experiences that feel effortless. I believe great design isn't just about aesthetics—it's about solving real problems for real people.
-            </p>
-        </div>
-        
-        <div class="about-hero-photo">
-            <div class="hero-photo-wrapper">
-                <img src="{{ url_for('static', filename='images/me.jpeg') }}" alt="Rajassvi" class="hero-photo">
-            </div>
-        </div>
+<section class="about-hero">
+    <div class="section-header">
+        <span class="section-label">Get to Know Me</span>
+        <h1 class="page-title">About Me</h1>
+        <p class="page-subtitle">UI/UX Engineer passionate about creating meaningful digital experiences that solve real problems</p>
     </div>
 </section>
 
 <section class="about-content">
+    <!-- Introduction -->
+    <div class="about-intro">
+
+    <!-- LEFT: TEXT -->
+    <div class="intro-text">
+        <h2>Hello! I'm Rajassvi</h2>
+
+        <p>I’m a UI/UX Engineer who loves making digital experiences that just feel right...</p>
+        <p>I got into design because I’ve always been curious about how people actually use technology...</p>
+        <p>I design with empathy, iterate a lot, and obsess over the details...</p>
+        <p>Basically, I’m here to build products that are easy to use, hard to forget, and genuinely enjoyable.</p>
+    </div>
+
+    <!-- RIGHT: IMAGE -->
+    <div class="about-photo-wrapper">
+        <div class="about-photo-frame">
+            <img src="{{ url_for('static', filename='images/me.jpeg') }}" alt="Rajassvi" class="about-photo">
+        </div>
+    </div>
+
+</div>
+
+        
+       
+
     <!-- Skills & Expertise -->
     <div class="about-skills">
         <h2 class="section-title-left">Skills & Expertise</h2>
@@ -138,7 +148,7 @@
         <h2 class="section-title-left">Outside of Work</h2>
         
         <div class="outside-work-content">
-            <p>When I'm not designing or coding, you'll probably find me:</p>
+            <p>When I’m not designing or coding, you’ll probably find me:</p>
             
             <div class="hobbies-grid">
                 <div class="hobby-card">
