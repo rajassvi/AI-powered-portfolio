@@ -1,4 +1,40 @@
 // ============================================
+// HAMBURGER MENU
+// ============================================
+const initHamburgerMenu = () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinkItems = document.querySelectorAll('.nav-link');
+    
+    if (!hamburger) return;
+    
+    // Toggle menu
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+    
+    // Close menu when clicking on a link
+    navLinkItems.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target) && navLinks.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+    });
+};
+
+// ============================================
 // THEME TOGGLE
 // ============================================
 const initThemeToggle = () => {
@@ -255,6 +291,7 @@ const initParallax = () => {
 // INIT ALL
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
+    initHamburgerMenu();
     initThemeToggle();
     if (window.innerWidth > 768) initCursor();
 
