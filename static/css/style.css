@@ -504,20 +504,20 @@ body {
 }
 
 .card-1 {
-    top: 25%;
-    left: 8%;
+    top: 20%;
+    left: 10%;
     animation: floatCard 6s infinite ease-in-out;
 }
 
 .card-2 {
-    top: 3%;
-    right: 45%;
+    top: 18%;
+    right: 35%;
     animation: floatCard 6s infinite ease-in-out -2s;
 }
 
 .card-3 {
-    bottom: 18%;
-    left: 12%;
+    bottom: 20%;
+    left: 15%;
     animation: floatCard 6s infinite ease-in-out -4s;
 }
 
