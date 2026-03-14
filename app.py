@@ -52,9 +52,16 @@ def cooks_on_call():
 def blockvote():
     return render_template("blockvote.html")
 
+@app.route("/projects/boohoo")
+def boohoo():
+    return render_template("boohoo.html")
+
 @app.route("/projects/snv-automation")
 def snv_automation():
     return render_template("snv-automation.html")
+@app.route("/projects/pnwx")
+def pnwx():
+    return render_template("pnwx.html")
 
 # --------------------------------------------------
 # Contact Form API (POST)

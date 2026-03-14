@@ -1,0 +1,293 @@
+{% extends "base.html" %}
+
+{% block title %}PNWX Medical Equipment - Case Study | Rajassvi{% endblock %}
+
+{% block content %}
+<section class="case-study-hero">
+    <div class="case-study-header">
+        <div class="case-study-badge">
+            <span class="badge-dot"></span>
+            <span>UI/UX Redesign</span>
+        </div>
+        
+        <h1 class="case-study-title">PNWX Medical Equipment</h1>
+        <p class="case-study-subtitle">Redesigning a medical equipment e-commerce platform for better product discovery</p>
+    </div>
+</section>
+
+<!-- Project Overview Cards -->
+<section class="project-overview">
+    <div class="overview-grid">
+        <div class="overview-card">
+            <div class="overview-icon">👤</div>
+            <h3>My Role</h3>
+            <p>UX/UI Designer</p>
+        </div>
+        <div class="overview-card">
+            <div class="overview-icon">🛠️</div>
+            <h3>Tools</h3>
+            <p>Figma</p>
+        </div>
+        <div class="overview-card">
+            <div class="overview-icon">🏥</div>
+            <h3>Industry</h3>
+            <p>Medical Equipment</p>
+        </div>
+        <div class="overview-card">
+            <div class="overview-icon">🎯</div>
+            <h3>Type</h3>
+            <p>Redesign Concept</p>
+        </div>
+    </div>
+</section>
+
+<section class="case-study-content">
+    <!-- Problem & Solution -->
+    <div class="content-section">
+        <div class="problem-solution-grid">
+            <div class="problem-block">
+                <span class="block-label">The Problem</span>
+                <h2 class="block-title">Poor product discovery experience</h2>
+                <div class="problem-points">
+                    <div class="problem-item">
+                        <span class="problem-icon">📦</span>
+                        <p><strong>Cluttered layout</strong> with inconsistent visual hierarchy</p>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-icon">🔍</span>
+                        <p><strong>Limited product discovery</strong> on the homepage</p>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-icon">🎛️</span>
+                        <p><strong>Difficult to access</strong> filters and search functionality</p>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-icon">🎴</span>
+                        <p><strong>Inconsistent product cards</strong> lacking clarity</p>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-icon">🎨</span>
+                        <p><strong>Outdated visual design</strong> reducing trust for medical equipment</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="solution-block">
+                <span class="block-label">The Solution</span>
+                <h2 class="block-title">Clean, professional redesign</h2>
+                <div class="solution-points">
+                    <div class="solution-item">
+                        <span class="check-icon">✓</span>
+                        <p>Improved <strong>product discoverability</strong> with clear categories</p>
+                    </div>
+                    <div class="solution-item">
+                        <span class="check-icon">✓</span>
+                        <p>Created clearer <strong>navigation structure</strong></p>
+                    </div>
+                    <div class="solution-item">
+                        <span class="check-icon">✓</span>
+                        <p>Designed <strong>consistent product cards</strong></p>
+                    </div>
+                    <div class="solution-item">
+                        <span class="check-icon">✓</span>
+                        <p>Simplified <strong>filtering and browsing</strong></p>
+                    </div>
+                    <div class="solution-item">
+                        <span class="check-icon">✓</span>
+                        <p>Built <strong>modern, trustworthy</strong> interface</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Homepage Comparison -->
+    <div class="content-section">
+        <div class="section-header-centered">
+            <span class="section-label">Solution</span>
+            <h2 class="section-title">Homepage Redesign</h2>
+        </div>
+        
+        <!-- Before -->
+        <div style="margin-bottom: 4rem;">
+            <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #EF4444; padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                <h3 style="color: #EF4444; margin: 0;">❌ Before</h3>
+            </div>
+            <div class="case-study-image" style="max-width: 900px; margin: 0 auto;">
+                <img src="{{ url_for('static', filename='images/pnwx-home-before.png') }}" alt="Original PNWX Homepage" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border: 2px solid var(--border-subtle);">
+            </div>
+        </div>
+        
+        <!-- After -->
+        <div>
+            <div style="background: rgba(34, 197, 94, 0.1); border-left: 4px solid #22C55E; padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                <h3 style="color: #22C55E; margin: 0;">✓ After</h3>
+            </div>
+            <div class="case-study-image" style="max-width: 900px; margin: 0 auto;">
+                <img src="{{ url_for('static', filename='images/pnwx-home-after.png') }}" alt="Redesigned PNWX Homepage" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border: 2px solid var(--border-subtle);">
+            </div>
+        </div>
+
+        <!-- Improvements List -->
+        <div class="learnings-grid-enhanced" style="margin-top: 3rem;">
+            <div class="learning-card-enhanced">
+                <div class="learning-number">01</div>
+                <h3>🎯 Clear Hero Section</h3>
+                <p>Focused messaging with prominent call-to-action directing users immediately toward product browsing</p>
+            </div>
+            <div class="learning-card-enhanced">
+                <div class="learning-number">02</div>
+                <h3>🔍 Search-First Discovery</h3>
+                <p>Large search bar enables quick equipment lookup without navigating multiple pages</p>
+            </div>
+            <div class="learning-card-enhanced">
+                <div class="learning-number">03</div>
+                <h3>🗂️ Category Navigation</h3>
+                <p>Visual product categories (X-Ray, Accessories, Veterinary, Protective Gear) for easy browsing</p>
+            </div>
+            <div class="learning-card-enhanced">
+                <div class="learning-number">04</div>
+                <h3>⭐ Featured Products</h3>
+                <p>Quick visibility into popular equipment with direct quote requests from product cards</p>
+            </div>
+            <div class="learning-card-enhanced">
+                <div class="learning-number">05</div>
+                <h3>🏆 Trust Indicators</h3>
+                <p>Experience, certifications, and reliability signals reinforce credibility for medical buyers</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Listing Comparison -->
+    <div class="content-section bg-dark">
+        <div class="section-header-centered">
+            <span class="section-label">Product Browsing</span>
+            <h2 class="section-title">Product Listing Redesign</h2>
+        </div>
+        
+        <!-- Before -->
+        <div style="margin-bottom: 4rem;">
+            <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #EF4444; padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                <h3 style="color: #EF4444; margin: 0;">❌ Before</h3>
+            </div>
+            <div class="case-study-image" style="max-width: 900px; margin: 0 auto;">
+                <img src="{{ url_for('static', filename='images/pnwx-product-before.png') }}" alt="Original Product Listing" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border: 2px solid var(--border-subtle);">
+            </div>
+        </div>
+        
+        <!-- After -->
+        <div>
+            <div style="background: rgba(34, 197, 94, 0.1); border-left: 4px solid #22C55E; padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                <h3 style="color: #22C55E; margin: 0;">✓ After</h3>
+            </div>
+            <div class="case-study-image" style="max-width: 900px; margin: 0 auto;">
+                <img src="{{ url_for('static', filename='images/pnwx-product-after.png') }}" alt="Redesigned Product Listing" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border: 2px solid var(--border-subtle);">
+            </div>
+        </div>
+
+        <!-- Improvements List -->
+        <div class="learnings-grid-enhanced" style="margin-top: 3rem;">
+            <div class="learning-card-enhanced">
+                <div class="learning-number">01</div>
+                <h3>🎛️ Sidebar Filtering</h3>
+                <p>Users can filter products by brand and price range to narrow down equipment quickly and efficiently</p>
+            </div>
+            <div class="learning-card-enhanced">
+                <div class="learning-number">02</div>
+                <h3>📦 Consistent Product Grid</h3>
+                <p>Structured grid layout with uniform cards makes product comparison and browsing easier</p>
+            </div>
+            <div class="learning-card-enhanced">
+                <div class="learning-number">03</div>
+                <h3>💡 Clear Product Info</h3>
+                <p>Each card displays equipment name, price indication, and prominent request-quote button</p>
+            </div>
+            <div class="learning-card-enhanced">
+                <div class="learning-number">04</div>
+                <h3>⚙️ Sorting Options</h3>
+                <p>Sort products by popularity and other criteria to streamline product exploration</p>
+            </div>
+            <div class="learning-card-enhanced">
+                <div class="learning-number">05</div>
+                <h3>📌 Persistent Filters</h3>
+                <p>Filters stay visible on the left side, allowing adjustments without losing browsing context</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Design System -->
+    <div class="content-section">
+        <div class="section-header-centered">
+            <span class="section-label">Visual Design</span>
+            <h2 class="section-title">UI Design System</h2>
+        </div>
+        
+        <div class="learnings-grid-enhanced" style="margin-top: 3rem;">
+            <div class="learning-card-enhanced">
+                <div class="learning-number">01</div>
+                <h3>🎨 Blue Color System</h3>
+                <p>Professional palette communicating trust, reliability, and credibility suitable for healthcare industry</p>
+            </div>
+            <div class="learning-card-enhanced">
+                <div class="learning-number">02</div>
+                <h3>🎴 Card-Based Layout</h3>
+                <p>Structured information using cards improves readability, scanning, and product comparison</p>
+            </div>
+            <div class="learning-card-enhanced">
+                <div class="learning-number">03</div>
+                <h3>📐 Better Spacing</h3>
+                <p>Consistent spacing and alignment creates clear visual hierarchy while reducing clutter</p>
+            </div>
+            <div class="learning-card-enhanced">
+                <div class="learning-number">04</div>
+                <h3>✨ Strategic Icons</h3>
+                <p>Visual cues for certifications, shipping, and checkout communicate key benefits at a glance</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Takeaway -->
+    <div class="content-section bg-dark">
+        <div class="section-header-centered">
+            <span class="section-label">Reflection</span>
+            <h2 class="section-title">Key Takeaway</h2>
+        </div>
+        
+        <div class="content-block" style="max-width: 800px; margin: 2rem auto 0; text-align: center;">
+            <p style="font-size: 1.25rem; line-height: 1.8;">
+                Restructuring the homepage and product listing created a <strong>cleaner, more intuitive browsing experience</strong> 
+                for healthcare professionals searching for medical equipment.
+            </p>
+        </div>
+    </div>
+
+    <!-- Website Link -->
+    <div class="content-section">
+    <div class="resume-download">
+        <div class="resume-cta">
+            <h3>Explore the Project</h3>
+            <p>View the original website and interact with the redesigned prototype.</p>
+
+            <div class="resume-buttons">
+
+                <!-- Original Website -->
+                <a href="https://www2.pnwx.com/" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-secondary">
+                    <span>Original Website</span>
+                </a>
+
+                <!-- Figma Prototype -->
+                <a href="https://www.figma.com/proto/XWj99EjK2MFiBmifYsoKU8/Untitled?node-id=13-77&t=OURl3erDZPQLcKqs-0&scaling=contain&content-scaling=fixed&page-id=0%3A1" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-primary">
+                    <span>View Interactive Prototype</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

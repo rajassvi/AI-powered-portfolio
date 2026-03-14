@@ -7,20 +7,23 @@
     <div class="section-header">
         <span class="section-label">Portfolio</span>
         <h1 class="page-title">Featured Projects</h1>
-        <p class="page-subtitle">A collection of UX design work showcasing research-driven solutions and measurable impact</p>
+        <p class="page-subtitle">
+            A collection of UX design work showcasing research-driven solutions and measurable impact
+        </p>
     </div>
-</section>
 
-<section class="projects-section">
     <div class="projects-filter">
         <button class="filter-btn active" data-filter="all">All Projects</button>
         <button class="filter-btn" data-filter="design">UX Design</button>
         <button class="filter-btn" data-filter="research">Research</button>
     </div>
+</section>
+
+
     
     <div class="projects-grid">
         <!-- Cooks on Call - Featured First -->
-        <article class="project-card" data-category="design">
+        <article class="project-card" data-category="research">
             <div class="project-image">
                 <img src="{{ url_for('static', filename='images/coc-thumbnail.png') }}" alt="Cooks on Call UK" class="project-thumbnail">
                 <div class="project-overlay">
@@ -30,7 +33,7 @@
             <div class="project-content">
                 <div class="project-meta">
                     <span class="project-tag">Featured</span>
-                    <span class="project-year">2023</span>
+                    <span class="project-year">2024</span>
                 </div>
                 <h3 class="project-title">Cooks on Call UK</h3>
                 <p class="project-description">
@@ -45,43 +48,63 @@
                 </div>
             </div>
         </article>
-
-        <!-- BlockVote -->
+ <!-- Boohoo -->
         <article class="project-card" data-category="design">
             <div class="project-image">
-                <img src="{{ url_for('static', filename='images/blockvote-thumbnail.png') }}" alt="BlockVote" class="project-thumbnail">
+                <img src="{{ url_for('static', filename='images/boohoo-thumbnail.png') }}" alt="Boohoo" class="project-thumbnail">
                 <div class="project-overlay">
-                    <a href="/projects/blockvote" class="btn-view">View Case Study</a>
+                    <a href="/projects/boohoo" class="btn-view">View Case Study</a>
                 </div>
             </div>
             <div class="project-content">
                 <div class="project-meta">
-                    <span class="project-tag">UX Design</span>
-                    <span class="project-year">2024</span>
+                    <span class="project-tag">E-commerce UX</span>
+                    <span class="project-year">2025</span>
                 </div>
-                <h3 class="project-title"> BlockVote</h3>
+                <h3 class="project-title">Boohoo</h3>
                 <p class="project-description">
-                    Secure blockchain-based digital voting platform designed to increase trust, transparency, and 
-                    accessibility in democratic elections through user-centered design.
+                    Enhanced shopping experience for fast-fashion e-commerce platform. Streamlined checkout flow 
+                    and personalized product discovery, resulting in 32% increase in conversion rate.
                 </p>
                 <div class="project-stack">
                     <span>UX Research</span>
-                    <span>Interaction Design</span>
+                    <span>E-commerce Design</span>
+                    <span>A/B Testing</span>
                     <span>Figma</span>
-                    <span>Usability Testing</span>
                 </div>
             </div>
         </article>
+               <!-- pnwx -->
 
-        <!-- SNV Automation -->
+         <article class="project-card" data-category="design">
+            <div class="project-image">
+                <img src="{{ url_for('static', filename='images/pnwx-thumbnail.png') }}" alt="PNWX Medical Equipment" class="project-thumbnail">
+                <div class="project-overlay">
+                   <a href="{{ url_for('pnwx') }}" class="btn-view">View Case Study</a>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="project-meta">
+                    <span class="project-tag">UI/UX Redesign</span>
+                    <span class="project-year">2026</span>
+                </div>
+                <h3 class="project-title">PNWX Website Redesign</h3>
+                <p class="project-description">
+                    Website redesign for medical X-ray equipment e-commerce platform. Improved product discovery, 
+                    navigation clarity, and visual hierarchy for healthcare professionals.
+                </p>
+                <div class="project-stack">
+                    <span>UI/UX Design</span>
+                    <span>E-commerce</span>
+                    <span>Figma</span>
+                    <span>Visual Design</span>
+                </div>
+            </div>
+        </article>
+         <!-- SNV Automation -->
         <article class="project-card" data-category="research">
             <div class="project-image">
-                <div class="project-placeholder project-gradient-1">
-                    <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                    </svg>
-                </div>
+                <img src="{{ url_for('static', filename='images/SNV.png') }}" alt="SNV Automation" class="project-thumbnail">
                 <div class="project-overlay">
                     <a href="/projects/snv-automation" class="btn-view">View Case Study</a>
                 </div>
@@ -104,7 +127,35 @@
                     <span>B2B UX</span>
                 </div>
             </div>
+       </article>
+        <!-- BlockVote -->
+        <article class="project-card" data-category="design">
+            <div class="project-image">
+                <img src="{{ url_for('static', filename='images/blockvote-thumbnail.png') }}" alt="BlockVote" class="project-thumbnail">
+                <div class="project-overlay">
+                    <a href="/projects/blockvote" class="btn-view">View Case Study</a>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="project-meta">
+                    <span class="project-tag">UX Design</span>
+                    <span class="project-year">2023</span>
+                </div>
+                <h3 class="project-title"> BlockVote</h3>
+                <p class="project-description">
+                    Secure blockchain-based digital voting platform designed to increase trust, transparency, and 
+                    accessibility in democratic elections through user-centered design.
+                </p>
+                <div class="project-stack">
+                    <span>UX Research</span>
+                    <span>Interaction Design</span>
+                    <span>Figma</span>
+                    <span>Usability Testing</span>
+                </div>
+            </div>
         </article>
+
+       
     </div>
 </section>
 
