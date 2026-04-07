@@ -1,0 +1,462 @@
+{% extends "base.html" %}
+
+{% block title %}ATS Forge - Case Study | Rajassvi{% endblock %}
+
+{% block content %}
+<section class="case-study-hero">
+    <div class="case-study-header">
+        <div class="case-study-badge">
+            <span class="badge-dot"></span>
+            <span>UX Case Study · AI Product Design</span>
+        </div>
+        
+        <h1 class="case-study-title">ATS Forge AI CV Builder</h1>
+        <p class="case-study-subtitle">Helping job seekers tailor resumes efficiently while maintaining control over AI-generated content</p>
+    </div>
+</section>
+
+<!-- Project Overview Cards -->
+<section class="project-overview">
+    <div class="overview-grid">
+        <div class="overview-card">
+            <div class="overview-icon">👤</div>
+            <h3>My Role</h3>
+            <p>UX Designer<br>Product Strategy<br>User Research<br>Interaction Design</p>
+        </div>
+        <div class="overview-card">
+            <div class="overview-icon">⏱️</div>
+            <h3>Timeline</h3>
+            <p>8 Weeks<br>Feb - Mar 2026</p>
+        </div>
+        <div class="overview-card">
+            <div class="overview-icon">🛠️</div>
+            <h3>Tools</h3>
+            <p>Figma<br>FigJam<br>User Interviews<br>Prototyping</p>
+        </div>
+        <div class="overview-card">
+            <div class="overview-icon">👥</div>
+            <h3>Team</h3>
+            <p>2-person team<br>UX Designer + Developer<br>Collaborative Design</p>
+        </div>
+    </div>
+</section>
+
+<section class="case-study-content">
+    <!-- Problem & Solution -->
+    <div class="content-section">
+        <div class="problem-solution-grid">
+            <div class="problem-block">
+                <span class="block-label">The Problem</span>
+                <h2 class="block-title">Tailoring resumes is repetitive and unclear</h2>
+                <div class="problem-points">
+                    <div class="problem-item">
+                        <span class="problem-icon">📝</span>
+                        <p><strong>Manual resume tailoring is time-consuming</strong> — job seekers spend hours rewriting resumes for each application</p>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-icon">🤖</span>
+                        <p><strong>Existing AI tools lack control</strong> — most resume builders generate generic outputs with no user refinement</p>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-icon">🎯</span>
+                        <p><strong>ATS alignment is unclear</strong> — users don't know if their resume will pass automated screening systems</p>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-icon">😰</span>
+                        <p><strong>Low confidence in resume quality</strong> — unclear which keywords matter and how to structure content effectively</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="solution-block">
+                <span class="block-label">The Solution</span>
+                <h2 class="block-title">AI-assisted workflow with user control</h2>
+                <div class="solution-points">
+                    <div class="solution-item">
+                        <span class="check-icon">✓</span>
+                        <p>Designed <strong>step-based guided workflow</strong> that breaks complex resume creation into manageable phases</p>
+                    </div>
+                    <div class="solution-item">
+                        <span class="check-icon">✓</span>
+                        <p>Balanced <strong>AI assistance with manual control</strong> — users can edit, regenerate, and refine all AI outputs</p>
+                    </div>
+                    <div class="solution-item">
+                        <span class="check-icon">✓</span>
+                        <p>Implemented <strong>ATS compatibility scoring</strong> showing keyword coverage, skills match, and structure alignment</p>
+                    </div>
+                    <div class="solution-item">
+                        <span class="check-icon">✓</span>
+                        <p>Created <strong>iterative editing system</strong> allowing users to refine AI suggestions with real-time feedback</p>
+                    </div>
+                </div>
+                <a href="https://askvish.com/atsforge-ai-cv-builder" target="_blank" class="btn btn-primary" style="margin-top: 2rem;">
+                    <span>Visit ATS Forge</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Personas -->
+    <div class="content-section bg-dark">
+        <div class="section-header-centered">
+            <span class="section-label">Understanding Users</span>
+            <h2 class="section-title">Two Distinct User Needs</h2>
+            <p class="section-intro">Users fall into two groups — those who need guidance and clarity, and those who prioritize speed and control. The product was designed to support both.</p>
+        </div>
+        
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <img src="{{ url_for('static', filename='images/personas-combined.png') }}" alt="Andrea and Sid User Personas" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
+        </div>
+    </div>
+
+    <!-- User Flow & System Thinking -->
+    <div class="content-section">
+        <div class="section-header-centered">
+            <span class="section-label">System Design</span>
+            <h2 class="section-title">How It Works</h2>
+        </div>
+
+        <div class="featured-image">
+            <img src="{{ url_for('static', filename='images/ATSflow.png') }}" alt="ATS Forge User Flow">
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; max-width: 1100px; margin-left: auto; margin-right: auto;">
+            <div class="learning-card-enhanced">
+                <div class="learning-number">01</div>
+                <h3>User Input</h3>
+                <p>Paste job description, upload profile — full control over data.</p>
+            </div>
+            
+            <div class="learning-card-enhanced">
+                <div class="learning-number">02</div>
+                <h3>AI Processing</h3>
+                <p>System analyzes requirements, extracts keywords, generates content.</p>
+            </div>
+            
+            <div class="learning-card-enhanced">
+                <div class="learning-number">03</div>
+                <h3>User Refinement</h3>
+                <p>Review, edit, regenerate — iterate until perfect.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Step-Based Workflow Design -->
+    <div class="content-section bg-dark">
+        <div class="section-header-centered">
+            <span class="section-label">Wireframing</span>
+            <h2 class="section-title">Early Sketches</h2>
+        </div>
+
+        <div style="max-width: 300px; margin: 0 auto;">
+            <img src="{{ url_for('static', filename='images/ATSWF.png') }}" alt="Early Wireframe Sketches" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
+        </div>
+    </div>
+
+    <!-- Final Workflow Design -->
+    <div class="content-section">
+        <div class="section-header-centered">
+            <span class="section-label">Final Design</span>
+            <h2 class="section-title">5-Step Workflow</h2>
+        </div>
+
+        <div style="max-width: 1400px; margin: 3rem auto; overflow-x: auto;">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; min-width: fit-content;">
+                <div class="evolution-step" style="min-width: 140px; padding: 1.5rem 1rem;">
+                    <span class="evolution-badge">Step 1</span>
+                    <h4 style="font-size: 1rem;">Job Description</h4>
+                    <p style="font-size: 0.85rem;">User pastes job posting</p>
+                </div>
+                <div class="evolution-arrow" style="font-size: 1.5rem;">→</div>
+                <div class="evolution-step" style="min-width: 140px; padding: 1.5rem 1rem;">
+                    <span class="evolution-badge">Step 2</span>
+                    <h4 style="font-size: 1rem;">JD Analysis</h4>
+                    <p style="font-size: 0.85rem;">AI extracts keywords</p>
+                </div>
+                <div class="evolution-arrow" style="font-size: 1.5rem;">→</div>
+                <div class="evolution-step" style="min-width: 140px; padding: 1.5rem 1rem;">
+                    <span class="evolution-badge">Step 3</span>
+                    <h4 style="font-size: 1rem;">Profile Input</h4>
+                    <p style="font-size: 0.85rem;">Upload resume</p>
+                </div>
+                <div class="evolution-arrow" style="font-size: 1.5rem;">→</div>
+                <div class="evolution-step" style="min-width: 140px; padding: 1.5rem 1rem;">
+                    <span class="evolution-badge">Step 4</span>
+                    <h4 style="font-size: 1rem;">CV Structure</h4>
+                    <p style="font-size: 0.85rem;">AI recommends format</p>
+                </div>
+                <div class="evolution-arrow" style="font-size: 1.5rem;">→</div>
+                <div class="evolution-step" style="min-width: 140px; padding: 1.5rem 1rem;">
+                    <span class="evolution-badge">Step 5</span>
+                    <h4 style="font-size: 1rem;">Generate & Export</h4>
+                    <p style="font-size: 0.85rem;">Review and download</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block" style="margin-top: 3rem;">
+            <p>Step-based flow reduces overwhelm. Users see progress, can go back if needed, and maintain control at each stage.</p>
+        </div>
+    </div>
+
+    <!-- ATS Compatibility Scoring -->
+    <div class="content-section">
+        <div class="section-header-centered">
+            <span class="section-label">Transparency</span>
+            <h2 class="section-title">ATS Scoring</h2>
+        </div>
+
+        <div class="featured-image">
+            <img src="{{ url_for('static', filename='images/ATSscore.png') }}" alt="ATS Compatibility Score Interface">
+        </div>
+
+        <div class="hifi-features-grid" style="margin-top: 3rem;">
+            <div class="hifi-feature-card">
+                <div class="feature-icon">🎯</div>
+                <h4>Overall Score</h4>
+                <p>Clear percentage showing resume compatibility</p>
+            </div>
+            
+            <div class="hifi-feature-card">
+                <div class="feature-icon">🔑</div>
+                <h4>Keyword Coverage</h4>
+                <p>Which job keywords are included</p>
+            </div>
+            
+            <div class="hifi-feature-card">
+                <div class="feature-icon">💼</div>
+                <h4>Skills Match</h4>
+                <p>Alignment with job requirements</p>
+            </div>
+            
+            <div class="hifi-feature-card">
+                <div class="feature-icon">📋</div>
+                <h4>Structure Quality</h4>
+                <p>Format is ATS-readable</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Interaction Design -->
+    <div class="content-section bg-dark">
+        <div class="section-header-centered">
+            <span class="section-label">User Control</span>
+            <h2 class="section-title">Edit Everything</h2>
+        </div>
+
+        <div class="featured-image">
+            <img src="{{ url_for('static', filename='images/Suggestion.png') }}" alt="AI Assistant Suggestions Interface">
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem;">
+            <div class="learning-card-enhanced">
+                <div class="learning-number">01</div>
+                <h3>AI Suggests</h3>
+                <p>Smart recommendations — you decide what to use.</p>
+            </div>
+            
+            <div class="learning-card-enhanced">
+                <div class="learning-number">02</div>
+                <h3>You Edit</h3>
+                <p>Click any text to edit inline. No locked fields.</p>
+            </div>
+            
+            <div class="learning-card-enhanced">
+                <div class="learning-number">03</div>
+                <h3>Regenerate</h3>
+                <p>Don't like it? Click regenerate for new options.</p>
+            </div>
+            
+            <div class="learning-card-enhanced">
+                <div class="learning-number">04</div>
+                <h3>Add Your Own</h3>
+                <p>Manually add anything. AI adapts around it.</p>
+            </div>
+        </div>
+
+        <div class="content-block" style="margin-top: 3rem;">
+            <p>Users felt uncomfortable when AI made decisions they couldn't control. Editable suggestions built trust.</p>
+        </div>
+    </div>
+
+    <!-- Key Design Decisions -->
+    <div class="content-section">
+        <div class="section-header-centered">
+            <span class="section-label">Design Principles</span>
+            <h2 class="section-title">Key Decisions</h2>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem;">
+            <div class="learning-card-enhanced">
+                <div class="learning-number">01</div>
+                <h3>Progressive Disclosure</h3>
+                <p>Show only what's needed at each step.</p>
+            </div>
+            
+            <div class="learning-card-enhanced">
+                <div class="learning-number">02</div>
+                <h3>Structured Inputs</h3>
+                <p>Break fields into logical sections to reduce cognitive load.</p>
+            </div>
+            
+            <div class="learning-card-enhanced">
+                <div class="learning-number">03</div>
+                <h3>Control Over Automation</h3>
+                <p>AI assists, users decide. No black boxes.</p>
+            </div>
+            
+            <div class="learning-card-enhanced">
+                <div class="learning-number">04</div>
+                <h3>Clarity Over Features</h3>
+                <p>Do core tasks well vs adding complexity.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collaboration & Process -->
+   <div class="content-section bg-dark">
+        <div class="section-header-centered">
+            <span class="section-label">Team</span>
+            <h2 class="section-title">2-Person Collaboration</h2>
+        </div>
+ 
+        <div class="testing-grid" style="gap: 2rem;">
+            <div class="testing-column success" style="padding: 2.5rem 2rem;">
+                <h3 style="margin-bottom: 1.5rem;">✨ What Worked</h3>
+                <ul class="testing-list" style="gap: 1rem;">
+                    <li style="padding: 1rem;">
+                        <span class="list-icon">🤝</span>
+                        <div>
+                            <strong>Quick Iteration</strong>
+                            <p>Aligned UX with technical feasibility early</p>
+                        </div>
+                    </li>
+                    <li style="padding: 1rem;">
+                        <span class="list-icon">⚡</span>
+                        <div>
+                            <strong>Rapid Prototyping</strong>
+                            <p>Tested ideas fast, pivoted when needed</p>
+                        </div>
+                    </li>
+                    <li style="padding: 1rem;">
+                        <span class="list-icon">🎯</span>
+                        <div>
+                            <strong>Shared Vision</strong>
+                            <p>Clear alignment on user problems and solutions</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+ 
+            <div class="testing-column iteration" style="padding: 2.5rem 2rem;">
+                <h3 style="margin-bottom: 1.5rem;">🔄 Challenges</h3>
+                <ul class="testing-list" style="gap: 1rem;">
+                    <li style="padding: 1rem;">
+                        <span class="list-icon">🤖</span>
+                        <div>
+                            <strong>AI Complexity</strong>
+                            <p>Managing what's feasible in MVP</p>
+                        </div>
+                    </li>
+                    <li style="padding: 1rem;">
+                        <span class="list-icon">📊</span>
+                        <div>
+                            <strong>Data Quality</strong>
+                            <p>AI output depends on input quality</p>
+                        </div>
+                    </li>
+                    <li style="padding: 1rem;">
+                        <span class="list-icon">🎨</span>
+                        <div>
+                            <strong>Design Trade-offs</strong>
+                            <p>Balancing ideal UX with backend complexity</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Outcome & Impact -->
+    <div class="content-section">
+        <div class="outcome-highlight">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Impact</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+                <div class="learning-card-enhanced">
+                    <div class="learning-number">✓</div>
+                    <h3>Simplified Process</h3>
+                    <p>Reduced resume customization to 10-15 minutes</p>
+                </div>
+                
+                <div class="learning-card-enhanced">
+                    <div class="learning-number">✓</div>
+                    <h3>Reduced Friction</h3>
+                    <p>Step-based flow minimized cognitive overload</p>
+                </div>
+                
+                <div class="learning-card-enhanced">
+                    <div class="learning-number">✓</div>
+                    <h3>Scalable Structure</h3>
+                    <p>Reusable AI-workflow patterns</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Learnings -->
+    <div class="content-section bg-dark">
+        <div class="section-header-centered">
+            <span class="section-label">Reflection</span>
+            <h2 class="section-title">Key Learnings</h2>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem;">
+            <div class="learning-card-enhanced">
+                <div class="learning-number">01</div>
+                <h3>AI Needs Control</h3>
+                <p>Full automation creates distrust. Users need editing capabilities and transparency.</p>
+            </div>
+            
+            <div class="learning-card-enhanced">
+                <div class="learning-number">02</div>
+                <h3>Structure Reduces Overwhelm</h3>
+                <p>Step-based flows help users complete complex tasks.</p>
+            </div>
+            
+            <div class="learning-card-enhanced">
+                <div class="learning-number">03</div>
+                <h3>Reduce Decision Fatigue</h3>
+                <p>Good UX isn't about fewer clicks — it's less mental effort.</p>
+            </div>
+            
+            <div class="learning-card-enhanced">
+                <div class="learning-number">04</div>
+                <h3>Design for Both Users</h3>
+                <p>Support beginners who need guidance and experts who need speed.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Reflection -->
+    <div class="content-section">
+        <div class="resume-download">
+            <div class="resume-cta">
+                <h3>Final Takeaway</h3>
+                <p style="font-size: 1.125rem; line-height: 1.8; max-width: 800px; margin: 0 auto 2rem;">AI in UX requires balancing automation with control. Users need to <strong>trust</strong> the system, not just use it.</p>
+                <div class="resume-buttons">
+                    <a href="https://askvish.com/atsforge-ai-cv-builder" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span>Visit Live Product</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

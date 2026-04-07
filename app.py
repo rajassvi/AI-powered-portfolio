@@ -52,9 +52,9 @@ def cooks_on_call():
 def blockvote():
     return render_template("blockvote.html")
 
-@app.route("/projects/boohoo")
-def boohoo():
-    return render_template("boohoo.html")
+@app.route('/projects/ats-forge')
+def ats_forge():
+    return render_template('ats-forge.html')
 
 @app.route("/projects/snv-automation")
 def snv_automation():
